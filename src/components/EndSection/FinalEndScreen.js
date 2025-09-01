@@ -8,6 +8,7 @@ const FinalEndScreen = () => {
   const [displayText, setDisplayText] = useState("");
   const [progress, setProgress] = useState(0);
 
+  // Handle scroll to calculate progress
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -23,6 +24,7 @@ const FinalEndScreen = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Typewriter animation based on scroll progress
   useEffect(() => {
     const startTyping = 0.7; // 70%
     const finishTyping = 1; // 100%
@@ -45,6 +47,16 @@ const FinalEndScreen = () => {
 
   const showHeart = progress >= 0.7 && displayText.length > 0;
 
+  // Restart Portfolio button handler
+  const handleRestart = () => {
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // Reset animations
+    setProgress(0);
+    setDisplayText("");
+  };
+
   return (
     <div className="ending-container">
       <div className="ending-content">
@@ -59,7 +71,7 @@ const FinalEndScreen = () => {
         <div className="qr-block">
           <p className="qr-text">Scan to download my CV</p>
           <QRCodeCanvas
-          value="https://drive.google.com/file/d/11_BztCD8aiXTBWOc5LAKjaDwENRPe0_S/view?usp=sharing"
+            value="https://drive.google.com/file/d/11_BztCD8aiXTBWOc5LAKjaDwENRPe0_S/view?usp=sharing"
             size={120}
             bgColor="#ffffff"
             fgColor="#e63946"
@@ -67,8 +79,8 @@ const FinalEndScreen = () => {
           />
         </div>
 
-        {/* New Glitch Animation Button */}
-        <button className="ui-btn">
+        {/* Restart Portfolio Button */}
+        <button className="ui-btn" onClick={handleRestart}>
           <span>Restart Portfolio</span>
         </button>
       </div>
