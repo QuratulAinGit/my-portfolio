@@ -1,0 +1,55 @@
+/* === GMAIL BUTTON STYLE === */
+.gmail-btn {
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(
+    45deg,
+    #d93025 0%,
+    #ea4335 25%,
+    #fbbc05 50%,
+    #34a853 75%,
+    #4285f4 100%
+  );
+  overflow: hidden;
+}
+
+.gmail-btn .svgIcon {
+  transition-duration: 0.3s;
+}
+
+.gmail-btn .svgIcon path {
+  fill: white;
+}
+
+.gmail-btn .text {
+  position: absolute;
+  color: #fff;
+  font-weight: 600;
+  width: 120px;
+  opacity: 0;
+  transition-duration: 0.4s;
+}
+
+.gmail-btn:hover {
+  width: 110px;
+  border-radius: 30px;
+  transition-duration: 0.4s;
+}
+
+.gmail-btn:hover .text {
+  opacity: 1;
+  transition-duration: 0.4s;
+}
+
+.gmail-btn:hover .svgIcon {
+  opacity: 0;
+  transition-duration: 0.3s;
+}

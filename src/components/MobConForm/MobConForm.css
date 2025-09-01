@@ -1,0 +1,85 @@
+/* Contact form container with transparency and smaller size */
+.contact-form-container {
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    width: 90%;
+    max-width: 350px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  /* Header styling */
+  .contact-form-header h2 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Form container */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; /* Space between inputs */
+  }
+  
+  /* Form group styling */
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent input background */
+    color: #ffffff;
+  }
+  
+  /* Input focus effect */
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #167c80;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Textarea styling */
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  /* Submit button styling */
+  .submit-btn {
+    padding: 0.6rem;
+    background: linear-gradient(90deg, #167c80, #0f5355);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submit-btn:hover {
+    background: #0f5355;
+    transform: scale(1.02);
+  }
+  
+  .submit-btn:focus {
+    outline: none;
+  }
+  
+  /* Hover effect for the form container */
+  .contact-form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Media query for mobile screens */
+ 

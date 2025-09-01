@@ -1,0 +1,40 @@
+.carousel-container {
+  position: relative;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-indicators-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-indicator {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+
+.carousel-indicator.active {
+  background-color: #00ffff;
+}
+
+.carousel-indicator.inactive {
+  background-color: #555;
+}

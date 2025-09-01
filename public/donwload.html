@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Download CV</title>
+</head>
+<body>
+  <script>
+    // Trigger the download immediately when page loads
+    window.onload = function() {
+      const link = document.createElement("a");
+      link.href = "/cv.pdf"; // Make sure cv.pdf is in public folder
+      link.download = "cv.pdf"; // Name of the downloaded file
+      link.click();
+    };
+  </script>
+  <p>If your download doesn't start automatically, <a href="/cv.pdf" download>click here</a>.</p>
+</body>
+</html>

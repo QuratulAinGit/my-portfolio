@@ -1,0 +1,47 @@
+/* From Uiverse.io by wilsondesouza */
+.Phone-Btn {
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: relative;
+  background: #0274b3;
+}
+
+.Phone-svgIcon {
+  transition-duration: 0.3s;
+}
+
+.Phone-svgIcon path {
+  fill: white;
+}
+
+.Phone-text {
+    position: absolute;
+  color: #fff;
+  font-weight: 600;
+  width: 120px;
+  opacity: 0;
+  transition-duration: 0.4s;
+}
+
+.Phone-Btn:hover {
+  width: 110px;
+  border-radius: 30px;
+  transition-duration: 0.4s;
+}
+
+.Phone-Btn:hover .Phone-text {
+  opacity: 1;
+  transition-duration: 0.2 s;
+}
+
+.Phone-Btn:hover .Phone-svgIcon {
+  opacity: 0;
+  transition-duration: 0.2s;
+}

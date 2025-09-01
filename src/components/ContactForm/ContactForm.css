@@ -1,0 +1,117 @@
+/* Contact form container (with backdrop blur effect) */
+.contact-form-container {
+  backdrop-filter: blur(100px);
+  width: 100%;
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Header styling */
+.contact-form-header h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Form container */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Input and textarea styles */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #167c80;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: #011c1d;
+  color: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0f5355;
+}
+
+/* Textarea styling */
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Submit button styling */
+.submit-btn {
+  padding: 0.8rem;
+  background-color: #167c80;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0f5355;
+}
+
+.submit-btn:focus {
+  outline: none;
+}
+
+/* Hover effect for the contact form */
+.contact-form-container:hover {
+  transform: translateY(-10px);
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  /* Make the form container full width on mobile */
+  .contact-form-container {
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none; /* Optional: remove box-shadow on small screens */
+  }
+
+  /* Adjust header size for mobile */
+  .contact-form-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Adjust form input size for mobile */
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem; /* Slightly smaller font on mobile */
+    padding: 0.6rem;
+  }
+
+  /* Submit button adjustment for mobile */
+  .submit-btn {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+}
