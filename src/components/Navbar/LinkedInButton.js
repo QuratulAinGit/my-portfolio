@@ -24,7 +24,7 @@ const LinkedInButton = () => {
              0 7.225 0 7.225z"
         />
       </svg>
-      <span className="link-text">LinkedIn</span>
+      <span className="link-text">Quratulain Soomro</span>
     </button>
   );
 };

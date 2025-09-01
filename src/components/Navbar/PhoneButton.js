@@ -20,7 +20,7 @@ const PhoneButton = () => {
           A2 2 0 0 1 22 16.92z"
         />
       </svg>
-      <span className="Phone-text">+92-3163903740</span>
+      <span className="Phone-text">+923428322654</span>
     </button>
   );
 };

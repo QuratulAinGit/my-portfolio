@@ -1,39 +1,20 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import MobileNav from '../MobileNav/MobileNav';
-import Insta from "../../themes/assets/instagram.png";
-import Linkedin from "../../themes/assets/linkedin.png";
-import Gmail from "../../themes/assets/gmail.png";
-import Phone from "../../themes/assets/phone-call.png";
-import Linkedinbtn from "./LinkedInButton"
+import Linkedinbtn from "./LinkedInButton";
 import InstagramButton from './InstagramButton';
 import GmailButton from './GmailButton';
 import PhoneButton from './PhoneButton';
+import Github from './Github'; // <-- Import GitHub button
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [showIcons, setShowIcons] = useState(false);
-  const [showEmail, setShowEmail] = useState(false);
-  const [showPhone, setShowPhone] = useState(false);
 
-  const toggleMenu = () => {
-    setOpenMenu(!openMenu);
-  };
+  const toggleMenu = () => setOpenMenu(!openMenu);
 
   const handleHireMeClick = () => {
     setShowIcons(!showIcons);
-    setShowEmail(false);
-    setShowPhone(false);
-  };
-
-  const toggleEmail = () => {
-    setShowEmail(!showEmail);
-    setShowPhone(false);
-  };
-
-  const togglePhone = () => {
-    setShowPhone(!showPhone);
-    setShowEmail(false);
   };
 
   return (
@@ -52,8 +33,12 @@ const Navbar = () => {
                 {/* Instagram */}
                 <li>
                   <div className="tray-icon">
-                    <a href="https://www.instagram.com/develloop?igsh=OXluOWx2YTdkM2Ex" target="_blank" rel="noreferrer">
-                     <InstagramButton/>
+                    <a
+                      href="https://www.instagram.com/develloop?igsh=OXluOWx2YTdkM2Ex"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <InstagramButton />
                     </a>
                   </div>
                 </li>
@@ -61,31 +46,44 @@ const Navbar = () => {
                 {/* LinkedIn */}
                 <li>
                   <div className="tray-icon">
-                    <a href="https://www.linkedin.com/in/sameersoomr" target="_blank" rel="noreferrer">
-                    <Linkedinbtn/>
+                    <a
+                      href="https://www.linkedin.com/in/quratulain-soomro-0958aa223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Linkedinbtn />
+                    </a>
+                  </div>
+                </li>
+
+                {/* GitHub */}
+                <li>
+                  <div className="tray-icon">
+                    <a
+                      href="https://github.com/QuratulAinGit" // <-- Replace with your GitHub link
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Github />
                     </a>
                   </div>
                 </li>
 
                 {/* Gmail */}
                 <li>
-                
                   <div className="tray-icon">
                     <a href="mailto:anniesoomro21@gmail.com" target="_blank" rel="noreferrer">
-                     <GmailButton/>
+                      <GmailButton />
                     </a>
                   </div>
                 </li>
 
-
                 {/* Phone */}
-               <li>
-                
+                <li>
                   <div className="tray-icon">
-               <a href="tel:+923001234567">
-                     <PhoneButton/>
-                     </a>
-                    
+                    <a href="tel:+923001234567">
+                      <PhoneButton />
+                    </a>
                   </div>
                 </li>
               </>
@@ -97,7 +95,10 @@ const Navbar = () => {
             </button>
           </ul>
 
-          <button className={`menu-btn ${openMenu ? 'active' : ''}`} onClick={toggleMenu}>
+          <button
+            className={`menu-btn ${openMenu ? 'active' : ''}`}
+            onClick={toggleMenu}
+          >
             <span></span>
             <span></span>
             <span></span>

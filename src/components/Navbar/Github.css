@@ -1,0 +1,46 @@
+.github-Btn {
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: relative;
+  background: #171515; /* GitHub dark color */
+}
+
+.github-svgIcon {
+  transition-duration: 0.3s;
+}
+
+.github-svgIcon path {
+  fill: white;
+}
+
+.github-text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  width: 120px;
+  font-weight: 600;
+  opacity: 0;
+  transition-duration: 0.4s;
+}
+
+.github-Btn:hover {
+  width: 110px;
+  transition-duration: 0.4s;
+  border-radius: 30px;
+}
+
+.github-Btn:hover .github-text {
+  opacity: 1;
+  transition-duration: 0.4s;
+}
+
+.github-Btn:hover .github-svgIcon {
+  opacity: 0;
+  transition-duration: 0.3s;
+}
