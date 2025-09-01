@@ -71,7 +71,7 @@ const Navbar = () => {
                 <li>
                 
                   <div className="tray-icon">
-                    <a href="https://www.instagram.com/develloop?igsh=OXluOWx2YTdkM2Ex" target="_blank" rel="noreferrer">
+                    <a href="mailto:anniesoomro21@gmail.com" target="_blank" rel="noreferrer">
                      <GmailButton/>
                     </a>
                   </div>
@@ -82,8 +82,9 @@ const Navbar = () => {
                <li>
                 
                   <div className="tray-icon">
-            
+               <a href="tel:+923001234567">
                      <PhoneButton/>
+                     </a>
                     
                   </div>
                 </li>
