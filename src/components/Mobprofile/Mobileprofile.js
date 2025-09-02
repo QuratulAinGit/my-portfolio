@@ -42,9 +42,9 @@ export default function Mobileprofile() {
         // Second tap - open link
         const links = {
         instagram: "https://instagram.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
+  linkedin: "https://www.linkedin.com/in/quratulain-soomro-0958aa223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   gmail: "mailto:your.email@gmail.com",
-  phone: "tel:+1234567890",
+  phone: "tel:+923428322654",
   github: "https://github.com/QuratulAinGit",
         };
 
@@ -102,7 +102,7 @@ export default function Mobileprofile() {
       </svg>
     ),
     account: "QuratulAinGit",
-    color: "#171515",
+    color: "#000000ff",
   },
 };
 

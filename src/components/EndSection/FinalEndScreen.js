@@ -8,19 +8,17 @@ const FinalEndScreen = () => {
   const [displayText, setDisplayText] = useState("");
   const [progress, setProgress] = useState(0);
 
-  // Handle scroll to calculate progress
+  // Handle scroll to calculate progress (iOS compatible)
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const scrollHeight = document.documentElement.scrollHeight;
-      const clientHeight = window.innerHeight;
-
-      const scrolled = (scrollTop + clientHeight) / scrollHeight;
-      const normalized = Math.min(Math.max(scrolled, 0), 1);
-      setProgress(normalized);
+      const vh = window.innerHeight;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+      const scrolled = (scrollTop + vh) / scrollHeight;
+      setProgress(Math.min(Math.max(scrolled, 0), 1));
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -47,14 +45,17 @@ const FinalEndScreen = () => {
 
   const showHeart = progress >= 0.7 && displayText.length > 0;
 
-  // Restart Portfolio button handler
+  // Restart Portfolio button handler (iOS smooth scroll fix)
   const handleRestart = () => {
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: "smooth" });
-
-    // Reset animations
     setProgress(0);
     setDisplayText("");
+    setTimeout(() => {
+      if ('scrollBehavior' in document.documentElement.style) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        window.scrollTo(0, 0); // fallback
+      }
+    }, 50);
   };
 
   return (
@@ -66,7 +67,6 @@ const FinalEndScreen = () => {
         {showHeart && <Heart />}
       </div>
 
-      {/* QR Code + Button Section */}
       <div className="qr-button-section">
         <div className="qr-block">
           <p className="qr-text">Scan to download my CV</p>
@@ -79,7 +79,6 @@ const FinalEndScreen = () => {
           />
         </div>
 
-        {/* Restart Portfolio Button */}
         <button className="ui-btn" onClick={handleRestart}>
           <span>Restart Portfolio</span>
         </button>

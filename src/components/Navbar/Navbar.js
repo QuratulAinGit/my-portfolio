@@ -90,7 +90,7 @@ const Navbar = () => {
             )}
 
             {/* Hire Me Button */}
-            <button className="contact-btn" onClick={handleHireMeClick}>
+            <button className="Hire-btn" onClick={handleHireMeClick}>
               Hire Me
             </button>
           </ul>

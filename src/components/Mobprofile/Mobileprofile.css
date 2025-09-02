@@ -172,11 +172,15 @@
 .account-container.phone .ribbon {
   background: linear-gradient(135deg, #34A853 0%, #00C851 100%);
 }
+.account-container.github .ribbon {
+  background: linear-gradient(135deg, #000000 0%, #0000009a 100%);
+}
 
 .account-container.instagram .ribbon::before { border-right-color: #f58529; }
 .account-container.linkedin .ribbon::before { border-right-color: #0077B5; }
 .account-container.gmail .ribbon::before { border-right-color: #EA4335; }
 .account-container.phone .ribbon::before { border-right-color: #34A853; }
+.account-container.github .ribbon::before { border-right-color: #000000; }
 
 /* Glow per account */
 .account-container.instagram .button-glow {
@@ -190,6 +194,9 @@
 }
 .account-container.phone .button-glow {
   background: radial-gradient(circle, rgba(52,168,83,0.4), rgba(0,200,81,0.1) 70%);
+}
+.account-container.github .button-glow {
+  background: radial-gradient(circle, rgba(1, 27, 8, 0.4), rgba(0, 0, 0, 0.1) 70%);
 }
 
 /* Footer */
